@@ -6,13 +6,10 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 @Entity
 public class Show {
 	@Id
@@ -25,13 +22,12 @@ public class Show {
 	//@ElementCollection
 	private List<Seat> seatsId;
 	private String showName ;
-	@OneToOne
 	//@Column(name = "movie_name")
-    private Movie movieName ;
+    private String movieName ;
 	//@JoinColumn(name = "theaterId", referencedColumnName = "theaterId",insertable = false,updatable = true)
-    private int theaterId;
-    //@JoinColumn(name = "screenId", referencedColumnName = "screenId",insertable = false,updatable = true)
-    private int screenId;
+//    private int theaterId;
+//    //@JoinColumn(name = "screenId", referencedColumnName = "screenId",insertable = false,updatable = true)
+//    private int screenId;
     
 	public int getShowId() {
 		return showId;
@@ -65,24 +61,24 @@ public class Show {
 		this.seatsId = seatsId;
 	}
 
-	public Movie getMovieName() {
+	public String getMovieName() {
 		return movieName;
 	}
-	public void setMovieName(Movie movieName) {
+	public void setMovieName(String movieName) {
 		this.movieName = movieName;
 	}
-	public int getTheaterId() {
-		return theaterId;
-	}
-	public void setTheaterId(int theaterId) {
-		this.theaterId = theaterId;
-	}
-	public int getScreenId() {
-		return screenId;
-	}
-	public void setScreenId(int screenId) {
-		this.screenId = screenId;
-	}
+//	public int getTheaterId() {
+//		return theaterId;
+//	}
+//	public void setTheaterId(int theaterId) {
+//		this.theaterId = theaterId;
+//	}
+//	public int getScreenId() {
+//		return screenId;
+//	}
+//	public void setScreenId(int screenId) {
+//		this.screenId = screenId;
+//	}
 	
     
       
